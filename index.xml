@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coldWord个人笔记</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on coldWord个人笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_cn</language>
+    <lastBuildDate>Wed, 01 May 2019 14:39:02 +0800</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      
+        <description>&lt;p&gt;记录一些个人笔记的地方&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>BIOS and UEFI</title>
+      <link>http://localhost:1313/post/bios-and-uefi/</link>
+      <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/bios-and-uefi/</guid>
+      
+        <description>
+
+&lt;h1 id=&#34;bios&#34;&gt;BIOS&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;BIOS（Basic Input Output System）是一种在&lt;strong&gt;固件（firmware）&lt;/strong&gt;，用于在启动过程（接通电源后开机启动，power-on startup）中执行硬件初始化，并为操作系统和程序提供运行时服务。&lt;/li&gt;
+&lt;li&gt;BIOS固件是&lt;strong&gt;电源接通&lt;/strong&gt;（power on）后&lt;strong&gt;第一个&lt;/strong&gt;运行的软件。&lt;/li&gt;
+&lt;li&gt;BIOS固件最初存储在PC主板（motherboard）上的ROM芯片中。在现代计算机系统中，BIOS的内容存储在&lt;strong&gt;闪存&lt;/strong&gt;（Flash Memory）中，因此可以在不从主板上删除芯片的情况下重写BIOS。这允许对BIOS固件进行简单的终端用户更新，以便添加新功能或修复bug，但也为计算机感染BIOS rootkit创造了可能性。&lt;/li&gt;
+&lt;li&gt;BIOS升级失败可能会永久&lt;strong&gt;阻塞主板&lt;/strong&gt;（brick motherboard），除非系统为此提供某种形式的备份。&lt;/li&gt;
+&lt;li&gt;功能
+
+&lt;ul&gt;
+&lt;li&gt;BIOS的第一项工作是&lt;strong&gt;开机自检（power-on self-test）&lt;/strong&gt;，它对CPU、RAM、显卡、键盘鼠标、硬盘驱动器、光驱等硬件设备进行初始化和识别。&lt;/li&gt;
+&lt;li&gt;BIOS然后定位位于引导设备（外围设备，如硬盘或CD/DVD)上的&lt;strong&gt;引导加载程序（bootloader，然后bootingloader会初始化一个操作系统）&lt;/strong&gt;软件，并加载和执行该软件，把对PC的控制权传递给操作系统。这个过程被称为&lt;strong&gt;引导（booting）&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;uefi&#34;&gt;UEFI&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;统一可扩展固件接口(Unified Extensible Firmware Interface，UEFI)是传统（Legacy）BIOS的替代者，现在大多数新的电脑都是默认UEFI。&lt;/li&gt;
+&lt;li&gt;UEFI可以支持计算机的远程诊断和修复，即使没有安装操作系统。&lt;/li&gt;
+&lt;li&gt;Intel开发了最初的可扩展固件接口(EFI)规范。在2005年，UEFI废弃了EFI 1.10 (EFI的最终版本)。&lt;/li&gt;
+&lt;li&gt;只支持小端（little-endian）处理器。&lt;/li&gt;
+&lt;li&gt;磁盘设备兼容性
+
+&lt;ul&gt;
+&lt;li&gt;除了使用主引导记录(master boot record，MBR)的标准PC磁盘分区方案之外&lt;/li&gt;
+&lt;li&gt;UEFI还与一个名为GPT (GUID partition Table)的新分区方案一起工作，该分区方案不受MBR的许多限制。&lt;/li&gt;
+&lt;li&gt;linux&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BIOS-GPT&lt;/strong&gt;：基于BIOS的系统可以使用GPT磁盘进行数据存储和引导，因为GRUB 2（一个linux的bootloader）和linux都是GPT-aware。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UEFI-GPT&lt;/strong&gt;：基于UEFI的系统可以直接从GPT磁盘进行引导。（从UEFI系统上的GPT磁盘引导Linux需要创建一个EFI系统分区(ESP)，其中包含UEFI应用程序，如bootloader、operating system kernel和实用软件等）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UEFI-MBR&lt;/strong&gt;：为了向后兼容性，大多数UEFI实现还支持通过从MBR分区磁盘引导（通过CSM（Compatibility Support Module），CSM提供legacy BIOS 的兼容性）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;参考链接&#34;&gt;参考链接&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/BIOS&#34;&gt;BIOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface&#34;&gt;UEFI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v%3dwin.10)&#34;&gt;Microsoft UEFI Support and Requirements for Windows Operating Systems&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

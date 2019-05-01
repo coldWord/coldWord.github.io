@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机基础 on coldWord个人笔记</title>
+    <link>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in 计算机基础 on coldWord个人笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_cn</language>
+    <lastBuildDate>Wed, 01 May 2019 14:39:02 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BIOS and UEFI</title>
+      <link>http://localhost:1313/post/bios-and-uefi/</link>
+      <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/bios-and-uefi/</guid>
+      <description>BIOS BIOS（Basic Input Output System）是一种在固件（firmware），用于在启动过程（接通电源后开机启动，power-on startup</description>
+    </item>
+    
+  </channel>
+</rss>
