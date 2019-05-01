@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>coldWord个人笔记</title>
-    <link>http://localhost:1313/</link>
+    <link>https://coldword.github.io/</link>
     <description>Recent content on coldWord个人笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_cn</language>
     <lastBuildDate>Wed, 01 May 2019 14:39:02 +0800</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://coldword.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://coldword.github.io/about/</link>
       <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://coldword.github.io/about/</guid>
       
         <description>&lt;p&gt;记录一些个人笔记的地方&lt;/p&gt;
 </description>
@@ -25,10 +25,10 @@
     
     <item>
       <title>BIOS and UEFI</title>
-      <link>http://localhost:1313/post/bios-and-uefi/</link>
+      <link>https://coldword.github.io/post/bios-and-uefi/</link>
       <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/bios-and-uefi/</guid>
+      <guid>https://coldword.github.io/post/bios-and-uefi/</guid>
       
         <description>
 

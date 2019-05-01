@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on coldWord个人笔记</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://coldword.github.io/categories/</link>
     <description>Recent content in Categories on coldWord个人笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_cn</language>
     <lastBuildDate>Wed, 01 May 2019 14:39:02 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://coldword.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://localhost:1313/categories/</link>
+      <link>https://coldword.github.io/categories/</link>
       <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
       
-      <guid>http://localhost:1313/categories/</guid>
+      <guid>https://coldword.github.io/categories/</guid>
       <description></description>
     </item>
     
     <item>
       <title>计算机基础</title>
-      <link>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+      <link>https://coldword.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
       
-      <guid>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://coldword.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
       <description></description>
     </item>
     
