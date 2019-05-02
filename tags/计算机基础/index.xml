@@ -6,10 +6,19 @@
     <description>Recent content in 计算机基础 on coldWord个人笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_cn</language>
-    <lastBuildDate>Wed, 01 May 2019 14:39:02 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2019 20:40:37 +0800</lastBuildDate>
     
 	<atom:link href="https://coldword.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Little Endian and Big Endian</title>
+      <link>https://coldword.github.io/post/little-endian-and-big-endian/</link>
+      <pubDate>Wed, 01 May 2019 20:40:37 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/little-endian-and-big-endian/</guid>
+      <description>字节序(Endianness)，指的是在存储器中或在数字链路传输过程中，由多个字节组成的对象的排列顺序。其中主要有两种冲突格式：小端序(Li</description>
+    </item>
     
     <item>
       <title>BIOS and UEFI</title>
@@ -17,7 +26,7 @@
       <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
       
       <guid>https://coldword.github.io/post/bios-and-uefi/</guid>
-      <description>BIOS BIOS（Basic Input Output System）是一种在固件（firmware），用于在启动过程（接通电源后开机启动，power-on startup</description>
+      <description>BIOS BIOS（Basic Input Output System）是一种固件（firmware），用于在启动过程中执行硬件初始化，并为操作系统和程序提供运行时服务，它</description>
     </item>
     
   </channel>

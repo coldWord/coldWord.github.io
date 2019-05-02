@@ -6,7 +6,7 @@
     <description>Recent content on coldWord个人笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_cn</language>
-    <lastBuildDate>Wed, 01 May 2019 14:39:02 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2019 20:40:37 +0800</lastBuildDate>
     
         <atom:link href="https://coldword.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,6 +24,76 @@
     </item>
     
     <item>
+      <title>Little Endian and Big Endian</title>
+      <link>https://coldword.github.io/post/little-endian-and-big-endian/</link>
+      <pubDate>Wed, 01 May 2019 20:40:37 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/little-endian-and-big-endian/</guid>
+      
+        <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;字节序(Endianness)&lt;/strong&gt;，指的是在存储器中或在数字链路传输过程中，由多个字节组成的对象的排列顺序。其中主要有两种冲突格式：&lt;strong&gt;小端序(Little-endian)&lt;/strong&gt;和&lt;strong&gt;大端序(Big-endian)&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;小端序-little-endian-和大端序-big-endian&#34;&gt;小端序(Little-endian)和大端序(Big-endian)&lt;/h1&gt;
+
+&lt;p&gt;Little-endian指的是存储中，从低地址向高地址方向，多字节对象中的&lt;strong&gt;最低有效位在最高有效位前面&lt;/strong&gt;(靠左的是高位)。而Big-endian和其正好相反。x86处理器使用的Little-endian，网络传输一般使用的是Big-endian。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;一个字节的对象在内存中的表示都是相同的&lt;/strong&gt;，比如二进制1000 0000(或表示为十六进制80H)在内存中的表示始终是这样。因此，字节序可以说是&lt;strong&gt;字节之间的顺序&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;举例，假如C语言中有int变量x的值为0x01234567，地址为0x100，那么其对应地址表达式&amp;amp;x的值为0x100，且x的四个字节将被存储在存储器的0x100, 0x101, 0x102, 0x103位置。&lt;/p&gt;
+
+&lt;p&gt;那么，little-endian存储如下图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://coldword.github.io/images/Little-endian.PNG&#34; alt=&#34;Little-endian&#34; title=&#34;Little-endian&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Big-endian存储如下图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://coldword.github.io/images/Big-endian.PNG&#34; alt=&#34;Big-endian&#34; title=&#34;Big-endian&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;c-test&#34;&gt;C Test&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main()
+{
+    union data
+    {
+        int x;
+        char ch[4];
+    }data_t;
+    data_t.x = 0x01234567;
+    printf(&amp;quot;%d\n&amp;quot;, sizeof(int));
+    printf(&amp;quot;the address of data_t.x is %x\n&amp;quot;, &amp;amp;data_t.x);
+    printf(&amp;quot;x is %x\n&amp;quot;, data_t.x);
+    for (int i = 0; i &amp;lt; 4; i++)
+    {
+        printf(&amp;quot;%x\n&amp;quot;, data_t.ch[i]);
+    }
+    char *cp = (char *)&amp;amp;data_t.x;
+    for (int i = 0; i &amp;lt; 4; i++)
+    {
+        printf(&amp;quot;address : %x, value : %x\n&amp;quot;, cp+i, *(cp+i));
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;x86下结果：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://coldword.github.io/images/byte-order-example-result.PNG&#34; alt=&#34;result&#34; title=&#34;result&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82%E5%BA%8F&#34;&gt;字节顺序&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>BIOS and UEFI</title>
       <link>https://coldword.github.io/post/bios-and-uefi/</link>
       <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
@@ -32,25 +102,42 @@
       
         <description>
 
-&lt;h1 id=&#34;bios&#34;&gt;BIOS&lt;/h1&gt;
+&lt;h2 id=&#34;bios&#34;&gt;BIOS&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;BIOS（Basic Input Output System）是一种在&lt;strong&gt;固件（firmware）&lt;/strong&gt;，用于在启动过程（接通电源后开机启动，power-on startup）中执行硬件初始化，并为操作系统和程序提供运行时服务。&lt;/li&gt;
-&lt;li&gt;BIOS固件是&lt;strong&gt;电源接通&lt;/strong&gt;（power on）后&lt;strong&gt;第一个&lt;/strong&gt;运行的软件。&lt;/li&gt;
-&lt;li&gt;BIOS固件最初存储在PC主板（motherboard）上的ROM芯片中。在现代计算机系统中，BIOS的内容存储在&lt;strong&gt;闪存&lt;/strong&gt;（Flash Memory）中，因此可以在不从主板上删除芯片的情况下重写BIOS。这允许对BIOS固件进行简单的终端用户更新，以便添加新功能或修复bug，但也为计算机感染BIOS rootkit创造了可能性。&lt;/li&gt;
+&lt;li&gt;BIOS（Basic Input Output System）是一种&lt;strong&gt;固件（firmware）&lt;/strong&gt;，用于在启动过程中执行硬件初始化，并为操作系统和程序提供运行时服务，它是计算机接通电源后&lt;strong&gt;第一个&lt;/strong&gt;运行的软件。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;通常按F2进入BIOS设置。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;BIOS固件最初存储在PC主板（motherboard）上的ROM芯片中。在现代计算机系统中，BIOS的内容存储在&lt;strong&gt;闪存（Flash Memory）&lt;/strong&gt;中，因此可以在不从主板上删除芯片的情况下重写BIOS。这允许对BIOS固件进行简单的终端用户更新，以便添加新功能或修复bug，但也为计算机感染BIOS rootkit创造了可能性。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;闪存(Flash Memory):是一种非易失性(保存数据不需要电力)的存储器，允许在操作中多次擦或写。比如，USB、SSD等。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
 &lt;li&gt;BIOS升级失败可能会永久&lt;strong&gt;阻塞主板&lt;/strong&gt;（brick motherboard），除非系统为此提供某种形式的备份。&lt;/li&gt;
 &lt;li&gt;功能
 
 &lt;ul&gt;
-&lt;li&gt;BIOS的第一项工作是&lt;strong&gt;开机自检（power-on self-test）&lt;/strong&gt;，它对CPU、RAM、显卡、键盘鼠标、硬盘驱动器、光驱等硬件设备进行初始化和识别。&lt;/li&gt;
-&lt;li&gt;BIOS然后定位位于引导设备（外围设备，如硬盘或CD/DVD)上的&lt;strong&gt;引导加载程序（bootloader，然后bootingloader会初始化一个操作系统）&lt;/strong&gt;软件，并加载和执行该软件，把对PC的控制权传递给操作系统。这个过程被称为&lt;strong&gt;引导（booting）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;首先，BIOS会进行&lt;strong&gt;开机自检（power-on self-test, POST）&lt;/strong&gt;，对CPU、RAM、显卡、键盘鼠标、硬盘驱动器、光驱等硬件设备进行初始化和识别。&lt;/li&gt;
+&lt;li&gt;然后，BIOS定位位于引导设备（如硬盘或CD/DVD)上的&lt;strong&gt;引导加载程序（bootloader）&lt;/strong&gt;软件，并加载和执行该软件，把对PC的控制权传递给操作系统。这个过程被称为&lt;strong&gt;引导（booting）&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;uefi&#34;&gt;UEFI&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;bootloader:是一个用来加载操作系统内核的程序。linux中一般是GRUB 2，window是BOOTMGR。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;uefi&#34;&gt;UEFI&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;统一可扩展固件接口(Unified Extensible Firmware Interface，UEFI)是传统（Legacy）BIOS的替代者，现在大多数新的电脑都是默认UEFI。&lt;/li&gt;
+&lt;li&gt;统一可扩展固件接口(Unified Extensible Firmware Interface，UEFI)是传统（Legacy）BIOS的替代者，现在新的电脑都是默认UEFI。&lt;/li&gt;
 &lt;li&gt;UEFI可以支持计算机的远程诊断和修复，即使没有安装操作系统。&lt;/li&gt;
 &lt;li&gt;Intel开发了最初的可扩展固件接口(EFI)规范。在2005年，UEFI废弃了EFI 1.10 (EFI的最终版本)。&lt;/li&gt;
 &lt;li&gt;只支持小端（little-endian）处理器。&lt;/li&gt;
@@ -59,8 +146,9 @@
 &lt;ul&gt;
 &lt;li&gt;除了使用主引导记录(master boot record，MBR)的标准PC磁盘分区方案之外&lt;/li&gt;
 &lt;li&gt;UEFI还与一个名为GPT (GUID partition Table)的新分区方案一起工作，该分区方案不受MBR的许多限制。&lt;/li&gt;
-&lt;li&gt;linux&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BIOS-GPT&lt;/strong&gt;：基于BIOS的系统可以使用GPT磁盘进行数据存储和引导，因为GRUB 2（一个linux的bootloader）和linux都是GPT-aware。&lt;/li&gt;
+&lt;li&gt;linux支持的引导方式&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BIOS-MBR&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BIOS-GPT&lt;/strong&gt;：基于BIOS的系统可以使用GPT磁盘进行数据存储和引导，因为GRUB 2和linux都是GPT-aware。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;UEFI-GPT&lt;/strong&gt;：基于UEFI的系统可以直接从GPT磁盘进行引导。（从UEFI系统上的GPT磁盘引导Linux需要创建一个EFI系统分区(ESP)，其中包含UEFI应用程序，如bootloader、operating system kernel和实用软件等）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;UEFI-MBR&lt;/strong&gt;：为了向后兼容性，大多数UEFI实现还支持通过从MBR分区磁盘引导（通过CSM（Compatibility Support Module），CSM提供legacy BIOS 的兼容性）&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -71,7 +159,9 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/BIOS&#34;&gt;BIOS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface&#34;&gt;UEFI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.restarters.net/UEFI_and_GPT&#34;&gt;UEFI-and-GPT&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v%3dwin.10)&#34;&gt;Microsoft UEFI Support and Requirements for Windows Operating Systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%97%AA%E5%AD%98&#34;&gt;闪存&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       
