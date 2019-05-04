@@ -6,7 +6,7 @@
     <description>Recent content on coldWord个人笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_cn</language>
-    <lastBuildDate>Wed, 01 May 2019 20:40:37 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2019 13:05:26 +0800</lastBuildDate>
     
         <atom:link href="https://coldword.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,277 @@
       <guid>https://coldword.github.io/about/</guid>
       
         <description>&lt;p&gt;记录一些个人笔记的地方&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Linux Common Commands</title>
+      <link>https://coldword.github.io/post/linux-common-commands/</link>
+      <pubDate>Sat, 04 May 2019 13:05:26 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/linux-common-commands/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;linux常用命令&#34;&gt;linux常用命令&lt;/h2&gt;
+
+&lt;h3 id=&#34;命令使用说明&#34;&gt;命令使用说明&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;man&lt;/code&gt; : 查询命令的说明文档&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;which&lt;/code&gt; : 定位命令的二进制文件位置&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;whereis&lt;/code&gt; : 定位一个命令的二进制文件，源码文件和man页面位置。当安装了软件的多个版本的时，可以用这个命令定位&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;文件及目录管理&#34;&gt;文件及目录管理&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;file&lt;/code&gt; : 文件类型查询&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pwd&lt;/code&gt; : 显示当前路径&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find&lt;/code&gt; : 实时查找目录及文件 eg.&lt;code&gt;find ./ -name &amp;quot;xx&amp;quot;&lt;/code&gt; 在当前目录及子目录下查找名为xx的文件或目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat -n&lt;/code&gt; : 显示文件时带行号&lt;/li&gt;
+&lt;li&gt;登录账号后会自动执行.profile文件，可以在这个文件设置自己的环境变量&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt; : 前面&lt;strong&gt;成功&lt;/strong&gt;则执行后一条命令，否则不执行 &lt;code&gt;a &amp;amp;&amp;amp; b&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;||&lt;/code&gt; : 前面&lt;strong&gt;失败&lt;/strong&gt;则执行后一条命令，否则不执行 &lt;code&gt;a || b&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;文本处理&#34;&gt;文本处理&lt;/h3&gt;
+
+&lt;h3 id=&#34;磁盘管理&#34;&gt;磁盘管理&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;df -h&lt;/code&gt; : 查看磁盘空间利用大小(-h 易读方式)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;du -sh&lt;/code&gt; : 查看当前目录所占空间大小(-h 人性化显示; -s 递归整个目录大小)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tar -cvf etc.tar /etc&lt;/code&gt; : 把/etc目录下文件打包到一个名为etc.tar的文件中(不压缩)
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; : 打包选项&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;v&lt;/code&gt; : 显示进度&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f&lt;/code&gt; : 使用档案文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&lt;/code&gt; : 有的系统中-可不加&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gzip&lt;/code&gt; : 压缩 &lt;code&gt;gzip xx&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tar -xvf etc.tar&lt;/code&gt; : 解包
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;x&lt;/code&gt; : 解包选项&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gunzip etc.tar.gz&lt;/code&gt; : gunzip解压缩&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tar -jxvf etc.tar.xz&lt;/code&gt; : 解压xz文件(包括解压缩和解包)
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;j&lt;/code&gt; : 解压bz2文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;J&lt;/code&gt; : 解压xz文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;z&lt;/code&gt; : 解压gz文件&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;进程管理&#34;&gt;进程管理&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ps -ef&lt;/code&gt; : 查询正在运行的进程&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pgrep -l re&lt;/code&gt; : 查询进程名含有re的进程ID(适合只记得部分进程名)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsof -i:3306&lt;/code&gt; : 查看端口占用的进程状态&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsof -u username&lt;/code&gt; : 查看用户username的进程所打开的文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsof -p 23295&lt;/code&gt; : 查询指定的进程ID(23295)打开的文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;top&lt;/code&gt; : 显示进程信息，并实时更新&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kill -9 PID&lt;/code&gt; : 杀死进程号为PID对应进程&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pmap PID&lt;/code&gt; : 分析线程堆栈&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;性能监控&#34;&gt;性能监控&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;free -m&lt;/code&gt; : 显示内存使用量，以MB大小&lt;/li&gt;
+&lt;li&gt;可选工具:&lt;code&gt;sar&lt;/code&gt; &lt;code&gt;vmstat&lt;/code&gt; &lt;code&gt;watch&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;网络工具&#34;&gt;网络工具&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;netstat&lt;/code&gt; : 命令用于显示各种网络相关信息，如网络连接，路由表，接口状态 (Interface Statistics)，masquerade 连接，多播成员 (Multicast Memberships) 等等
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;netstat -a&lt;/code&gt; : 列出所有端口(包括监听和未监听的)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;查询7902端口现在运行什么程序:
+
+&lt;ol&gt;
+&lt;li&gt;先查询使用该端口的进程的PID(假设为30294)；&lt;code&gt;lsof -i:7902&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用ps工具查询进程详情：&lt;code&gt;ps -fe | grep 30294&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;route -n&lt;/code&gt; : 查看路由状况&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ping IP&lt;/code&gt; : 发送ping包到地址IP&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;traceroute6 IP&lt;/code&gt; : 探测前往地址IP的路由路径&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;host domain&lt;/code&gt; : DNS查询，寻找域名domain对应的IP&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;host IP&lt;/code&gt; : 反向DNS查询&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wget url&lt;/code&gt; : 直接下载文件或者网页
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;–limit-rate&lt;/code&gt; : 下载限速&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-o&lt;/code&gt; : 指定日志文件；输出都写入日志&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-c&lt;/code&gt; : 断点续传&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh ID@host&lt;/code&gt; : ssh登陆远程服务器host，ID为用户名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp localpath ID@host:path&lt;/code&gt; : 将本地localpath指向的文件上传到远程主机的path路径&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp -r ID@site:path localpath&lt;/code&gt; : 以ssh协议，遍历下载path路径下的整个文件系统，到本地的localpath&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;用户管理&#34;&gt;用户管理&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;useradd -m username&lt;/code&gt; : 该命令为用户创建相应的帐号和用户目录/home/username
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;passwd username&lt;/code&gt; : 用户添加之后，设置密码，密码以交互方式创建&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;userdel -r username&lt;/code&gt; : 不带选项使用 userdel，只会删除用户。用户的家目录将仍会在/home目录下。要完全的删除用户信息，使用-r选项&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;su userB&lt;/code&gt; : 切换到userB用户帐号工作&lt;/li&gt;
+&lt;li&gt;系统的所有用户及所有组信息分别记录在两个文件中：/etc/passwd , /etc/group 默认情况下这两个文件对所有用户可读：
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;more /etc/passwd&lt;/code&gt; : 查看所有用户及权限&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;more /etc/group&lt;/code&gt; : 查看所有的用户组及权限&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;环境变量&#34;&gt;环境变量&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;bashrc与profile都用于保存用户的环境信息，bashrc用于交互式non-loginshell，而profile用于交互式login shell。
+
+&lt;ul&gt;
+&lt;li&gt;/etc/profile，/etc/bashrc 是系统全局环境变量设定&lt;/li&gt;
+&lt;li&gt;~/.profile，~/.bashrc用户目录下的私有环境变量设定&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;当登入系统获得一个shell进程时，其读取环境设置脚本分为三步:
+
+&lt;ol&gt;
+&lt;li&gt;首先读入的是全局环境变量设置文件/etc/profile，然后根据其内容读取额外的文档，如/etc/profile.d和/etc/inputrc&lt;/li&gt;
+&lt;li&gt;读取当前登录用户Home目录下的文件~/.bash_profile，其次读取~/.bash_login，最后读取~/.profile，这三个文档设定基本上是一样的，读取有优先关系&lt;/li&gt;
+&lt;li&gt;读取~/.bashrc&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;~/.profile与~/.bashrc的区别:
+
+&lt;ul&gt;
+&lt;li&gt;这两者都具有个性化定制功能&lt;/li&gt;
+&lt;li&gt;~/.profile可以设定本用户专有的路径，环境变量，等，它&lt;strong&gt;只能登入的时候执行一次&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;~/.bashrc也是某用户专有设定文档，可以设定路径，命令别名，&lt;strong&gt;每次shell script的执行都会使用它一次&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;系统管理&#34;&gt;系统管理&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;uname -a&lt;/code&gt; : 查看Linux系统版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat /proc/cpuinfo | grep processor | wc -l&lt;/code&gt; : 查看CPU核的个数&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat /proc/meminfo&lt;/code&gt; : 查看内存信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;arch&lt;/code&gt; : 显示架构&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;date&lt;/code&gt; : 显示当前系统时间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ulimit – a&lt;/code&gt; : 显示当前所有的系统资源limit 信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html&#34;&gt;Linux Tools Quick Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Makefile</title>
+      <link>https://coldword.github.io/post/makefile/</link>
+      <pubDate>Fri, 03 May 2019 15:24:54 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/makefile/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;make&#34;&gt;make&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;make是一种自动化编译工具，只要编程语言(不仅限于C/C++)的编译器可以通过shell命令运行，都可以用make来进行自动化编译或重编译。此外，make也不仅限于程序，只要那些
+完成一个任务的文件依赖于其他文件来更新(无论其他文件什么时候改变)时，都可以使用make来完成。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;makefile&#34;&gt;Makefile&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;要运行make工具，必须要写一个被称为Makefile的文件来描述程序中各个文件的关系和需要的命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;一个简单的Makefile由一系列的如下所示的规则组成:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;target ... : prerequisites ...
+&amp;lt;TAB&amp;gt;recipe
+&amp;lt;TAB&amp;gt;...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一个target通常是一个由程序生成的文件的名字，比如可执行文件或者目标文件(*.o)；而且target也可以是一个操作的名字，比如&amp;rsquo;clean&amp;rsquo;等(也叫做&lt;a href=&#34;#1&#34;&gt;Phony Targets&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;一个prerequisite是生成target需要的输入文件，一个target可以依赖多个文件。&lt;/li&gt;
+&lt;li&gt;一个recipe是make工具需要执行的命令，可以有多个recipe。每行recipe前必须要加一个TAB键。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;make是怎么处理makefile的&#34;&gt;make是怎么处理Makefile的&lt;/h3&gt;
+
+&lt;p&gt;默认情况下，make把第一个target作为&lt;strong&gt;默认目标&lt;/strong&gt;(默认目标是make最终想要更新的target)。&lt;/p&gt;
+
+&lt;p&gt;假设有如下Makefile：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a: b c
+    command1
+b: d
+    command2
+c: e
+    command3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;那么，a就是运行&lt;code&gt;make&lt;/code&gt;命令时，要更新的默认目标。输入了&lt;code&gt;make&lt;/code&gt;命令后，make工具读取当前目录下的Makefile，然后处理文件中的第一个规则(a代表的规则)，但是因为a依赖于b和c，所以make工具要先判断b是不是最新版本。如果文件b之前不存在，或者b的依赖d文件的时间比b新，那么要执行command2要更新b，否则不执行。然后和b类似的步骤判断c。&lt;strong&gt;command1不管b和c新不新始终会执行&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h3 id=&#34;隐含规则-implicit-rules&#34;&gt;隐含规则(Implicit Rules)&lt;/h3&gt;
+
+&lt;p&gt;to be continues&lt;/p&gt;
+
+&lt;h3 id=&#34;变量-宏&#34;&gt;变量(宏)&lt;/h3&gt;
+
+&lt;p&gt;Makefile中也可以使用变量，如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# 定义obj宏
+obj = abc
+# 通过$(obj)在其他地方上使用
+$(obj)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;1&#34;&gt;PHONY Targets&lt;/h3&gt;
+
+&lt;p&gt;一个PHONY target并不是真正文件的名字，它只是当你想要精确的执行某些命令时的一个代号。比如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;clean:
+    rm *.o tmp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当你每次使用&lt;code&gt;make clean&lt;/code&gt;时，都会执行rm命令。&lt;/p&gt;
+
+&lt;p&gt;在这个例子中，当你Makefile存在的目录下有名为&lt;strong&gt;clean的同名文件&lt;/strong&gt;时，这个target不会正常工作。因为这个target没有prerequisite，所以&lt;strong&gt;clean文件始终被认为是最新版本&lt;/strong&gt;，从而recipe表示的命令不会执行。&lt;/p&gt;
+
+&lt;p&gt;为了避免这种问题，可以显式的声明clean target是.PHONY target的一个prerequisite，通过如下方式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.PHONY: clean
+clean:
+    rm *.o tmp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这种方式下，不管有没有同名文件clean，&lt;code&gt;make clean&lt;/code&gt;都会正常执行rm命令。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gnu.org/software/make/manual/html_node/index.html&#34;&gt;GNU make manual&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>

@@ -1,32 +1,86 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on coldWord个人笔记</title>
+    <title>coldWord个人笔记</title>
     <link>https://coldword.github.io/tags/</link>
-    <description>Recent content in Tags on coldWord个人笔记</description>
+    <description>Recent content on coldWord个人笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_cn</language>
-    <lastBuildDate>Wed, 01 May 2019 20:40:37 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2019 13:05:26 +0800</lastBuildDate>
     
 	<atom:link href="https://coldword.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title></title>
-      <link>https://coldword.github.io/tags/</link>
-      <pubDate>Wed, 01 May 2019 20:40:37 +0800</pubDate>
+      <title>Linux Common Commands</title>
+      <link>https://coldword.github.io/post/linux-common-commands/</link>
+      <pubDate>Sat, 04 May 2019 13:05:26 +0800</pubDate>
       
-      <guid>https://coldword.github.io/tags/</guid>
-      <description></description>
+      <guid>https://coldword.github.io/post/linux-common-commands/</guid>
+      <description>linux常用命令 命令使用说明 man : 查询命令的说明文档 which : 定位命令的二进制文件位置 whereis : 定位一个命令的二进制文件，源码文件和man页面位置。当安</description>
     </item>
     
     <item>
-      <title>计算机基础</title>
-      <link>https://coldword.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+      <title>Linux Common Commands</title>
+      <link>https://coldword.github.io/post/linux-common-commands/</link>
+      <pubDate>Sat, 04 May 2019 13:05:26 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/linux-common-commands/</guid>
+      <description>linux常用命令 命令使用说明 man : 查询命令的说明文档 which : 定位命令的二进制文件位置 whereis : 定位一个命令的二进制文件，源码文件和man页面位置。当安</description>
+    </item>
+    
+    <item>
+      <title>Makefile</title>
+      <link>https://coldword.github.io/post/makefile/</link>
+      <pubDate>Fri, 03 May 2019 15:24:54 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/makefile/</guid>
+      <description>make make是一种自动化编译工具，只要编程语言(不仅限于C/C++)的编译器可以通过shell命令运行，都可以用make来进行自动化编译或重编</description>
+    </item>
+    
+    <item>
+      <title>Makefile</title>
+      <link>https://coldword.github.io/post/makefile/</link>
+      <pubDate>Fri, 03 May 2019 15:24:54 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/makefile/</guid>
+      <description>make make是一种自动化编译工具，只要编程语言(不仅限于C/C++)的编译器可以通过shell命令运行，都可以用make来进行自动化编译或重编</description>
+    </item>
+    
+    <item>
+      <title>Little Endian and Big Endian</title>
+      <link>https://coldword.github.io/post/little-endian-and-big-endian/</link>
       <pubDate>Wed, 01 May 2019 20:40:37 +0800</pubDate>
       
-      <guid>https://coldword.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
-      <description></description>
+      <guid>https://coldword.github.io/post/little-endian-and-big-endian/</guid>
+      <description>字节序(Endianness)，指的是在存储器中或在数字链路传输过程中，由多个字节组成的对象的排列顺序。其中主要有两种冲突格式：小端序(Li</description>
+    </item>
+    
+    <item>
+      <title>Little Endian and Big Endian</title>
+      <link>https://coldword.github.io/post/little-endian-and-big-endian/</link>
+      <pubDate>Wed, 01 May 2019 20:40:37 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/little-endian-and-big-endian/</guid>
+      <description>字节序(Endianness)，指的是在存储器中或在数字链路传输过程中，由多个字节组成的对象的排列顺序。其中主要有两种冲突格式：小端序(Li</description>
+    </item>
+    
+    <item>
+      <title>BIOS and UEFI</title>
+      <link>https://coldword.github.io/post/bios-and-uefi/</link>
+      <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/bios-and-uefi/</guid>
+      <description>BIOS BIOS（Basic Input Output System）是一种固件（firmware），用于在启动过程中执行硬件初始化，并为操作系统和程序提供运行时服务，它</description>
+    </item>
+    
+    <item>
+      <title>BIOS and UEFI</title>
+      <link>https://coldword.github.io/post/bios-and-uefi/</link>
+      <pubDate>Wed, 01 May 2019 14:39:02 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/bios-and-uefi/</guid>
+      <description>BIOS BIOS（Basic Input Output System）是一种固件（firmware），用于在启动过程中执行硬件初始化，并为操作系统和程序提供运行时服务，它</description>
     </item>
     
   </channel>

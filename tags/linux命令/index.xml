@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux命令 on coldWord个人笔记</title>
+    <link>https://coldword.github.io/tags/linux%E5%91%BD%E4%BB%A4/</link>
+    <description>Recent content in linux命令 on coldWord个人笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_cn</language>
+    <lastBuildDate>Sat, 04 May 2019 13:05:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://coldword.github.io/tags/linux%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux Common Commands</title>
+      <link>https://coldword.github.io/post/linux-common-commands/</link>
+      <pubDate>Sat, 04 May 2019 13:05:26 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/linux-common-commands/</guid>
+      <description>linux常用命令 命令使用说明 man : 查询命令的说明文档 which : 定位命令的二进制文件位置 whereis : 定位一个命令的二进制文件，源码文件和man页面位置。当安</description>
+    </item>
+    
+  </channel>
+</rss>

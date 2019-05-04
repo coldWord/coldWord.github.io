@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>make on coldWord个人笔记</title>
+    <link>https://coldword.github.io/tags/make/</link>
+    <description>Recent content in make on coldWord个人笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_cn</language>
+    <lastBuildDate>Fri, 03 May 2019 15:24:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://coldword.github.io/tags/make/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Makefile</title>
+      <link>https://coldword.github.io/post/makefile/</link>
+      <pubDate>Fri, 03 May 2019 15:24:54 +0800</pubDate>
+      
+      <guid>https://coldword.github.io/post/makefile/</guid>
+      <description>make make是一种自动化编译工具，只要编程语言(不仅限于C/C++)的编译器可以通过shell命令运行，都可以用make来进行自动化编译或重编</description>
+    </item>
+    
+  </channel>
+</rss>
